@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "chat": [
+      {
+        "appID": "9675XXQZ5X.com.sourceone.buyer",
+        "paths": [
+          "*"
+        ]
+      }
+    ]
+  }
+}
+
