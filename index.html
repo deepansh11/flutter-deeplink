@@ -7,15 +7,9 @@
 </head>
 <body>
     <script>
-        var currentURL = window.location.href;
-
-        if (currentURL.startsWith("https://buyer-app-deeplink.netlify.app/")) {
-            window.location.href = currentURL;
-        } else {
-            setTimeout(function () {
+          setTimeout(function () {
                 window.location.href = "http://app.source.one";
             }, 3000);
-        }
     </script>
 </body>
 </html>
