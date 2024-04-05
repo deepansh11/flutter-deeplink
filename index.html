@@ -7,14 +7,16 @@
 </head>
 <body>
   <script>
-
     function handleDeepLink() {
-        setTimeout(() => {
-        window.location = 'https://buyer-app-deeplink.netlify.app'
-        window.location = 'http://app.source.one';
-        }, 3000);
+      var currentPath = window.location.pathname;
+      
+      console.log('Opening ' + currentPath + '...');
+
+      setTimeout(() => {
+        window.location.href = 'http://app.source.one';
+      }, 3000);
     }
-    
+
     window.onload = handleDeepLink;
   </script>
 </body>
