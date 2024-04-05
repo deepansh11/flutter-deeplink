@@ -6,18 +6,15 @@
   <title>Deep Link Handler</title>
 </head>
 <body>
-  <button onclick="handleDeepLink()">Open Deep Link</button>
-
   <script>
-    function handleDeepLink() {
-      var deepLink = 'https://buyer-app-deeplink.netlify.app/';
-      window.location.href = deepLink;
 
-      
-      setTimeout(function() {
-        window.location.href = 'https://app.source.one';
-      }, 1000);
+    function handleDeepLink() {
+        setTimeout(() => {
+        window.location.href = 'http://app.source.one';
+        }, 3000);
     }
+    
+    window.onload = handleDeepLink;
   </script>
 </body>
 </html>
