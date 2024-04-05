@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Page</title>
+</head>
+<body>
+    <script>
+        // Redirect to the first URL immediately
+        window.location.href = "https://buyer-app-deeplink.netlify.app/";
+
+        // After 3 seconds, redirect to the second URL
+        setTimeout(function () {
+            window.location.href = "http://app.source.one";
+        }, 3000);
+    </script>
+</body>
+</html>
