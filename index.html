@@ -7,24 +7,10 @@
 </head>
 <body>
     <script>
-        var currentURL = window.location.href;
-
-        if (currentURL.startsWith("https://buyer-app-deeplink.netlify.app/")) {
-            window.location.href = currentURL;
-
-            var redirectionDone = false;
-
-            setTimeout(function () {
-                if (window.location.href === currentURL && !redirectionDone) {
-                    window.location.href = "http://app.source.one";
-                    redirectionDone = true; 
-                }
-            }, 1000); 
-        } else {
-            setTimeout(function () {
-                window.location.href = "http://app.source.one";
-            }, 3000);
-        }
+        window.location.href = "https://buyer-app-deeplink.netlify.app/chat";
+setTimeout(function () {
+    window.location.href = "http://app.source.one";
+}, 1000);
     </script>
 </body>
 </html>
