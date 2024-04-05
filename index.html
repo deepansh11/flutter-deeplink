@@ -7,21 +7,21 @@
 </head>
 <body>
     <script>
-       var deeplinkUrl = window.location.href;
-        var change = false;
-        setTimeout(() => {
-        if (!change) {
-        var redirectUrl = "http://app.source.one";
-        window.location = redirectUrl;
-        }
-        }, 3000);
-        window.location = deeplinkUrl;
-        //handle event to check app installed or not
-        window.onblur = function () {
-        change = true;
-        };
-        window.onfocus = function(){
-        change = false;
+        var currentURL = window.location.href;
+
+        if (currentURL.startsWith("https://buyer-app-deeplink.netlify.app/")) {
+            window.location.href = currentURL;
+
+            setTimeout(function () {
+                if (window.location.href === currentURL) {
+                    window.location.href = "http://app.source.one";
+                }
+            }, 1000); 
+        } else {
+            
+            setTimeout(function () {
+                window.location.href = "http://app.source.one";
+            }, 3000);
         }
     </script>
 </body>
