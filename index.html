@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirect Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deep Link Handler</title>
 </head>
 <body>
-    <script>
-        window.location.href = "https://buyer-app-deeplink.netlify.app/chat";
-setTimeout(function () {
-    window.location.href = "http://app.source.one";
-}, 1000);
-    </script>
+  <button onclick="handleDeepLink()">Open Deep Link</button>
+
+  <script>
+    function handleDeepLink() {
+      var deepLink = 'https://buyer-app-deeplink.netlify.app/';
+      window.location.href = deepLink;
+
+      
+      setTimeout(function() {
+        window.location.href = 'https://app.source.one';
+      }, 1000);
+    }
+  </script>
 </body>
 </html>
